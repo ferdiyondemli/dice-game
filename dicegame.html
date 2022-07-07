@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DICE GAME</title>
     <style>
       * {
         margin: 10px;
@@ -108,71 +108,71 @@
   <body>
     <div>
       <section>
-        <img id="img1" src="resimler/dice1.png" alt="" />
+        <img id="img1" src="pics/dice1.png" alt="" />
       </section>
       <section>
-        <img id="img2" src="resimler/dice1.png" alt="" />
+        <img id="img2" src="pics/dice1.png" alt="" />
       </section>
     </div>
     <div>
-      <button class="button  button-1 button-2" onclick="salla()" id="ell2">Zar At</button>
+      <button class="button  button-1 button-2" onclick="GO()" id="ell2">Zar At</button>
     </div>
     <script>
       var uy = 0;
 
-      dur();
+      stopp();
 
-      function salla() {
+      function GO() {
         if (uy == 0) {
-          document.getElementById("ell2").innerHTML = "Durdur";
+          document.getElementById("ell2").innerHTML = "STOP";
 
-          zarat1();
+          go1();
         } else {
-          document.getElementById("ell2").innerHTML = "Zar At";
+          document.getElementById("ell2").innerHTML = "GO";
 
-          dur();
+          stopp();
         }
       }
 
-      function zarat() {
+      function goo() {
         var a = (Math.floor(Math.random() * 10) % 6) + 1;
         var b = (Math.floor(Math.random() * 10) % 6) + 1;
 
         if (a == 1) {
-          document.getElementById("img1").src = "resimler/dice1.png";
+          document.getElementById("img1").src = "pics/dice1.png";
         } else if (a == 2) {
-          document.getElementById("img1").src = "resimler/dice2.png";
+          document.getElementById("img1").src = "pics/dice2.png";
         } else if (a == 3) {
-          document.getElementById("img1").src = "resimler/dice3.png";
+          document.getElementById("img1").src = "pics/dice3.png";
         } else if (a == 4) {
-          document.getElementById("img1").src = "resimler/dice4.png";
+          document.getElementById("img1").src = "pics/dice4.png";
         } else if (a == 5) {
-          document.getElementById("img1").src = "resimler/dice5.png";
+          document.getElementById("img1").src = "pics/dice5.png";
         } else if (a == 6) {
-          document.getElementById("img1").src = "resimler/dice6.png";
+          document.getElementById("img1").src = "pics/dice6.png";
         }
         if (b == 1) {
-          document.getElementById("img2").src = "resimler/dice1.png";
+          document.getElementById("img2").src = "pics/dice1.png";
         } else if (b == 2) {
-          document.getElementById("img2").src = "resimler/dice2.png";
+          document.getElementById("img2").src = "pics/dice2.png";
         } else if (b == 3) {
-          document.getElementById("img2").src = "resimler/dice3.png";
+          document.getElementById("img2").src = "pics/dice3.png";
         } else if (b == 4) {
-          document.getElementById("img2").src = "resimler/dice4.png";
+          document.getElementById("img2").src = "pics/dice4.png";
         } else if (b == 5) {
-          document.getElementById("img2").src = "resimler/dice5.png";
+          document.getElementById("img2").src = "pics/dice5.png";
         } else if (b == 6) {
-          document.getElementById("img2").src = "resimler/dice6.png";
+          document.getElementById("img2").src = "pics/dice6.png";
         }
       }
-      function zarat1() {
+      function go1() {
         if (uy == 0) {
-          uy = setInterval(zarat, 150);
+          uy = setInterval(goo, 150);
         } else {
-          alert("zaten çalışıyor");
+          alert("already working...");
         }
       }
-      function dur() {
+      function stopp() {
         clearInterval(uy);
         uy = 0;
       }
